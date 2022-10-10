@@ -75,10 +75,31 @@ a:hover {
   color: #000;
 }
 
+/*トップへ戻るボタン*/
+#to_top{
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  opacity: 0;
+}
+
+#to_top.scrolled{
+  opacity: 1;
+}
+
+#to_top i{
+  font-style: 32px;
+  color: #22577a;
+}
+
 /* header */
 header {
   /* background: #eee; */
   padding: 8px 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
 }
 
 header form{
@@ -125,9 +146,15 @@ header button{
   cursor: pointer;
 }
 
+header.scrolled {
+  background-color:rgba(255, 255, 255, .95);
+  box-shadow: 0 0 4px rgba(0, 0, 0, .3);
+}
+
 /* hero */
 .hero{
   height: 400px;
+  padding-top: 64px;
 }
 
 .hero img {
