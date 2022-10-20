@@ -2,6 +2,8 @@
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
+  color: #000;
+  background:#fff;
 }
 
 h1,
@@ -338,6 +340,17 @@ footer ul{
 
 footer li + li{
   margin-left: 8px;
+}
+
+/* Dark Mode */
+@media(prefers-color-scheme:dark){
+  body,footer,header.scrolled,.container,.overlay{
+    color: #fff;
+    background: #000;
+  }
+  .comment{
+    color: #000;
+  }
 }
 
 /*small screen*/
