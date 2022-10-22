@@ -52,6 +52,54 @@ a:hover {
   transform: none;
 }
 
+/*FAQ DTFNTRの説明*/
+dl, .desc{
+  margin: 32px 0 0 0;
+}
+
+dl > div{
+  margin-bottom: 8px;
+}
+
+dt{
+  padding: 8px;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+}
+
+dt::before{
+  content: 'Q.';
+}
+
+dt::after{
+  content: '＋';
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  transition: transform .3s;
+}
+
+dl > div.open dt::after{
+  transform: rotate(45deg);
+}
+
+dd{
+  padding: 8px;
+  margin: 0;
+  display: none;
+}
+
+dd::before{
+  content: 'A.';
+}
+
+dl > div.open dd{
+  display: block;
+  animation: .3s fadeIn;
+}
+
+/*ユーザーの声*/
 .voices .comment{
   background:#eee;
   padding: 16px;
@@ -68,7 +116,6 @@ a:hover {
   align-items: center;
 }
 
-/*ユーザーの声*/
 .v_footer{
   background: #eee;
 }
@@ -315,9 +362,9 @@ header.scrolled {
 
 /*footer*/
 footer{
-  background: #4c4948;
+  background: #e1dbd9;
   padding: 16px 0;
-  color: #eee;
+  color: #4c4948;
 }
 
 footer .container{
@@ -336,6 +383,7 @@ footer li i{
 
 footer ul{
   display: flex;
+  margin-right: 32px;
 }
 
 footer li + li{
@@ -437,5 +485,17 @@ footer li + li{
 
   .animate.delay-more {
     transition-delay: .6s;
+  }
+}
+
+@keyframes fadeIn{
+  0%{
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  100%{
+    opacity: 1;
+    transform: none;
   }
 }

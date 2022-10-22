@@ -77,6 +77,22 @@
     });
   }
 
+  //FAQ開閉
+  const dts = document.querySelectorAll('dt');
+
+  dts.forEach(dt => {
+    dt.addEventListener('click',() => {
+      dt.parentNode.classList.toggle('open');
+
+      dts.forEach(el =>{
+        if(dt !== el){
+          el.parentNode.classList.remove('open');
+        }
+      });
+    });
+  });
+
+  //Topへ戻る
   const toTop = document.getElementById('to_top');
 
   const options = {
