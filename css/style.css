@@ -12,6 +12,14 @@ h2 {
   font-weight: normal;
 }
 
+h1 .{
+  display:block;
+}
+
+h1 .sp{
+  display:none;
+}
+
 p {
   margin: 0;
 }
@@ -398,6 +406,27 @@ footer li + li{
   }
   .comment{
     color: #000;
+  }
+
+  h1 .pc{
+    display: none;
+  }
+
+  h1 .sp{
+    display:block;
+  }
+
+  .user .comment{
+    background: #000;
+    border: #fff 2px solid;
+  }
+  
+  .user p{
+    color: #fff;
+  }
+
+  .v_footer{
+    background: #000;
   }
 }
 
