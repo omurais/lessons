@@ -12,7 +12,7 @@ h2 {
   font-weight: normal;
 }
 
-h1 .{
+h1 .pc{
   display:block;
 }
 
@@ -145,7 +145,7 @@ dl > div.open dd{
 }
 
 #to_top i{
-  font-style: 32px;
+  font-size: 32px;
   color: #22577a;
 }
 
@@ -391,7 +391,7 @@ footer li i{
 
 footer ul{
   display: flex;
-  margin-right: 32px;
+  margin-right: 40px;
 }
 
 footer li + li{
@@ -427,6 +427,10 @@ footer li + li{
 
   .v_footer{
     background: #000;
+  }
+
+  #to_top i{
+    color: #fff;
   }
 }
 
