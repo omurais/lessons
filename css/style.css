@@ -371,6 +371,7 @@ header.scrolled {
 /* タブメニュー */
 .menu{
   display: flex;
+  margin-top: 32px;
 }
 
 .menu li a{
@@ -397,12 +398,12 @@ header.scrolled {
 .content{
   display: none;
   border-radius: 0 0 4px 4px;
+  margin-bottom: 32px;
 }
 
 /*footer*/
 footer{
   background: #e1dbd9;
-  margin-top: 32px;
   padding: 16px 0;
   color: #4c4948;
 }
