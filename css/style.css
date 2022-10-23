@@ -368,9 +368,41 @@ header.scrolled {
   margin: 32px auto 0;
 }
 
+/* タブメニュー */
+.menu{
+  display: flex;
+}
+
+.menu li a{
+  width: 100px;
+  display: inline-block;
+  text-align: center;
+  padding: 8px;
+  text-decoration: none;
+  border-radius: 4px 4px 0 0;
+}
+
+.menu li a.active{
+  background: #eee;
+  pointer-events: none;
+}
+
+.content.active{
+  background: #eee;
+  display: block;
+  min-height: 150px;
+  padding: 16px;
+}
+
+.content{
+  display: none;
+  border-radius: 0 0 4px 4px;
+}
+
 /*footer*/
 footer{
   background: #e1dbd9;
+  margin-top: 32px;
   padding: 16px 0;
   color: #4c4948;
 }
