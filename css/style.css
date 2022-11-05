@@ -156,7 +156,7 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1;
+  z-index: 2;
 }
 
 header form{
@@ -241,7 +241,7 @@ header.scrolled {
   padding: 64px;
   opacity: 0;
   pointer-events: none;
-  z-index: 2;
+  z-index: 3;
   transition: opacity .6s;
 }
 
@@ -374,8 +374,12 @@ header.scrolled {
   margin-top: 32px;
 }
 
+.menu li{
+  width: calc(100% / 3);
+}
+
 .menu li a{
-  width: 100px;
+  width: calc(100% - 16px);
   display: inline-block;
   text-align: center;
   padding: 8px;
@@ -399,6 +403,61 @@ header.scrolled {
   display: none;
   border-radius: 0 0 4px 4px;
   margin-bottom: 32px;
+}
+
+/* about */
+section.about{
+  padding-top: 120px;
+}
+
+#ab_open, #ab_close {
+  cursor: pointer;
+  width: 200px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-align: center;
+  padding: 12px 0;
+  margin: 16px auto 0;
+}
+
+#ab_open{
+  margin-bottom: 40px; 
+}
+
+#ab_mask {
+  background: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 2;
+}
+
+#ab_mask.hidden{
+  display: none;
+}
+
+#ab_modal {
+  background: #fff;
+  width: 300px;
+  padding: 20px;
+  border-radius: 4px;
+  position: absolute;
+  top: 136px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: 2;
+  transition: .3s;
+}
+
+#ab_modal > p {
+  margin: 0 0 20px;
+}
+
+#ab_modal.hidden{
+  opacity: 0;
 }
 
 /*footer*/
@@ -429,42 +488,6 @@ footer ul{
 
 footer li + li{
   margin-left: 8px;
-}
-
-/* Dark Mode */
-@media(prefers-color-scheme:dark){
-  body,footer,header.scrolled,.container,.overlay{
-    color: #fff;
-    background: #000;
-  }
-  .comment{
-    color: #000;
-  }
-
-  h1 .pc{
-    display: none;
-  }
-
-  h1 .sp{
-    display:block;
-  }
-
-  .user .comment{
-    background: #000;
-    border: #fff 2px solid;
-  }
-  
-  .user p{
-    color: #fff;
-  }
-
-  .v_footer{
-    background: #000;
-  }
-
-  #to_top i{
-    color: #fff;
-  }
 }
 
 /*small screen*/
@@ -563,5 +586,46 @@ footer li + li{
   100%{
     opacity: 1;
     transform: none;
+  }
+}
+
+/* Dark Mode */
+@media(prefers-color-scheme:dark){
+  body,footer,header.scrolled,.container,.overlay{
+    color: #fff;
+    background: #000;
+  }
+
+  .menu li a.active,.content.active{
+    background:rgb(100, 99, 99);
+  }
+
+  .comment{
+    color: #000;
+  }
+
+  h1 .pc{
+    display: none;
+  }
+
+  h1 .sp{
+    display:block;
+  }
+
+  .user .comment{
+    background: #000;
+    border: #fff 2px solid;
+  }
+  
+  .user p{
+    color: #fff;
+  }
+
+  .v_footer{
+    background: #000;
+  }
+
+  #to_top i{
+    color: #fff;
   }
 }
