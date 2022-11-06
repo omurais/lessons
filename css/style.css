@@ -410,18 +410,29 @@ section.about{
   padding-top: 120px;
 }
 
-#ab_open, #ab_close {
+#ab_open{
   cursor: pointer;
   width: 200px;
   border: 1px solid #ccc;
   border-radius: 4px;
   text-align: center;
   padding: 12px 0;
-  margin: 16px auto 0;
+  margin: 16px auto 40px;
 }
 
-#ab_open{
-  margin-bottom: 40px; 
+#ab_close {
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 8px;
+  margin: 0 0 16px auto;
+}
+
+#ab_open:hover,#ab_close:hover{
+  background: #eee;
+  transition: .5s;
 }
 
 #ab_mask {
@@ -441,7 +452,7 @@ section.about{
 #ab_modal {
   background: #fff;
   width: 300px;
-  padding: 20px;
+  padding: 0;
   border-radius: 4px;
   position: absolute;
   top: 136px;
@@ -449,15 +460,17 @@ section.about{
   right: 0;
   margin: 0 auto;
   z-index: 2;
-  transition: .3s;
+  transition: 1s;
+  opacity: 1;
 }
 
 #ab_modal > p {
   margin: 0 0 20px;
+  padding: 8px 16px;
 }
 
 #ab_modal.hidden{
-  opacity: 0;
+  display: none;
 }
 
 /*footer*/
@@ -612,7 +625,7 @@ footer li + li{
     display:block;
   }
 
-  .user .comment{
+  .user .comment,#ab_modal{
     background: #000;
     border: #fff 2px solid;
   }
