@@ -1,6 +1,20 @@
 'use strict';
 
 {
+  // //headerのパス取得
+  // let path = location.pathname.split("/")[1];
+  
+  // switch(path){
+  //   case 'index.html':
+  //       $('img').attr('href', './img/logo.png');
+  //       break;
+  //   case 'html':
+  //       $('img').attr('href', '../img/logo.png');
+  //       break;
+  //   default:
+  //       $('img').attr('href', './img/logo.png');
+  //     }
+
   //ハンバーガーメニュー開閉
   const open = document.getElementById('open');
   const overlay = document.querySelector('.overlay');
