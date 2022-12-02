@@ -10,59 +10,7 @@
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-  <header class="scrolled">
-    <div class="container">
-      <a href="https://omurais.github.io/lessons/">
-        <h1>
-          <img 
-            src="../img/logo.png" 
-            alt="DTFNTR"
-            width="168"
-            height="48"
-            class="pc">
-            <img 
-            src="../img/logo_dark.png" 
-            alt="DTFNTR"
-            width="168"
-            height="48"
-            class="sp">
-        </h1>
-      </a>
-      <form action="">
-        <input type="text" name="" id="">
-        <button><i class="bi bi-search"></i></button>
-      </form>
-      <nav>
-        <ul>
-          <li>
-            <a href="#">
-              <i class="bi bi-person-circle"></i>
-              ログイン
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <i class="bi bi-cart4"></i>
-              カート
-            </a>
-          </li>
-          <li class="sp-menu">
-            <a href="#">
-              <i class="bi bi-list" id="open"></i>
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-    <div class="container">
-    <ul class="pc-menu">
-      <li><a href="../index.html">HOME</a></li>
-      <li><a href="#">ABOUT</a></li>
-      <li><a href="access.html">ACCESS</a></li>
-      <li><a href="info.html">INFO.</a></li>
-    </ul>
-  </div>
-  </header>
+  <div id="header"><!-- ここにheader.htmlが読み込まれる --></div>
   <div class="overlay">
     <i class="bi bi-x" id="close"></i>
     <nav>
@@ -102,5 +50,11 @@
   <a href="#" id="to_top"><i class="bi bi-chevron-double-up"></i></a>
   <script src="../js/main.js"></script>
   <script src="../js/about.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+  <script>
+    $(function(){
+        $('#header').load('/header.html'); // #headerにheader.htmlを読み込む
+    });
+</script>
 </body>
 </html>

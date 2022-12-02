@@ -10,7 +10,8 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header class="scrolled">
+  <div id="header"><!-- ここにheader.htmlが読み込まれる --></div>
+  <!-- <header class="scrolled">
     <div class="container">
       <a href="https://omurais.github.io/lessons/">
         <h1>
@@ -62,7 +63,7 @@
       <li><a href="info.html">INFO.</a></li>
     </ul>
   </div>
-  </header>
+  </header> -->
   <div class="overlay">
     <i class="bi bi-x" id="close"></i>
     <nav>
@@ -198,7 +199,8 @@
 
   <section class="products animate slide-from-left">
     <div class="container">
-      <h1>FAQ</h1>
+      <h>FAQ</h
+        1>
       <dl>
         <div>
           <dt>質問です</dt>
@@ -216,17 +218,19 @@
     </div>
   </section>
 
-  <footer>
-    <div class="container">
-      <small>(c) omrhryk.com</small>
-      <ul>
-        <li><a href="#"><i class="bi bi-twitter"></i></a></li>
-        <li><a href="#"><i class="bi bi-instagram"></i></a></li>
-      </ul>
-    </div>
-  </footer>
+  <div id="footer"><!-- ここにheader.htmlが読み込まれる --></div>
   <a href="#" id="to_top"><i class="bi bi-chevron-double-up"></i></a>
   <script src="js/main.js"></script>
   <script src="js/index.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+  <script>
+    $(function(){
+        $('#header').load('header.html'); // #headerにheader.htmlを読み込む
+    });
+
+    $(function(){
+        $('#footer').load('footer.html'); // #footerにfooter.htmlを読み込む
+    });
+</script>
 </body>
 </html>
