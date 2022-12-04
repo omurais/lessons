@@ -1,19 +1,19 @@
 'use strict';
 
 {
-  //headerのパス取得
-  let path = location.pathname.split("/")[1];
+  // //headerのパス取得
+  // let path = location.pathname.split("/")[1];
   
-  switch(path){
-    case 'index.html':
-        $('img').attr('href', './img/logo.png');
-        break;
-    case 'html':
-        $('img').attr('href', '../img/logo.png');
-        break;
-    default:
-        $('img').attr('href', './img/logo.png');
-      }
+  // switch(path){
+  //   case 'index.html':
+  //       $('img').attr('href', './img/logo.png');
+  //       break;
+  //   case 'html':
+  //       $('img').attr('href', '../img/logo.png');
+  //       break;
+  //   default:
+  //       $('img').attr('href', './img/logo.png');
+  //     }
 
   //ハンバーガーメニュー開閉
   const open = document.getElementById('open');
@@ -78,11 +78,11 @@
 
   dts.forEach(dt => {
     dt.addEventListener('click',() => {
-      dt.parentNode.classList.toggle('open');
+      dt.parentNode.classList.toggle('faq_open');
 
       dts.forEach(el =>{
         if(dt !== el){
-          el.parentNode.classList.remove('open');
+          el.parentNode.classList.remove('faq_open');
         }
       });
     });

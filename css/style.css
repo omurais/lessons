@@ -88,7 +88,7 @@ dt::after{
   transition: transform .3s;
 }
 
-dl > div.open dt::after{
+dl > div.faq_open dt::after{
   transform: rotate(45deg);
 }
 
@@ -102,7 +102,7 @@ dd::before{
   content: 'A.';
 }
 
-dl > div.open dd{
+dl > div.faq_open dd{
   display: block;
   animation: .3s fadeIn;
 }
