@@ -15,21 +15,6 @@
   //       $('img').attr('href', './img/logo.png');
   //     }
 
-  //ハンバーガーメニュー開閉
-  const open = document.getElementById('open');
-  const overlay = document.querySelector('.overlay');
-  const close = document.getElementById('close');
-
-  open.addEventListener('click', () => {
-    overlay.classList.add('show');
-    open.classList.add('hide');
-  });
-
-  close.addEventListener('click', () => {
-    overlay.classList.remove('show');
-    open.classList.remove('hide');
-  });
-
   //Intersection Observer API
   //アニメーション設定 タイトルエリア
   // function callback(entries, obs){
@@ -72,21 +57,6 @@
       }
     });
   }
-
-  //FAQ開閉
-  const dts = document.querySelectorAll('dt');
-
-  dts.forEach(dt => {
-    dt.addEventListener('click',() => {
-      dt.parentNode.classList.toggle('faq_open');
-
-      dts.forEach(el =>{
-        if(dt !== el){
-          el.parentNode.classList.remove('faq_open');
-        }
-      });
-    });
-  });
 
   //タブメニュー
   const menuItems = document.querySelectorAll('.menu li a');
