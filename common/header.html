@@ -1,0 +1,79 @@
+<header class="scrolled">
+    <div class="container">
+      <a href="https://omurais.github.io/lessons/">
+        <h1>
+          <img 
+            src="../img/logo.png"
+            alt="DTFNTR"
+            width="168"
+            height="48"
+            class="pc">
+            <img 
+            src="../img/logo_dark.png"
+            alt="DTFNTR"
+            width="168"
+            height="48"
+            class="sp">
+        </h1>
+      </a>
+      <form action="">
+        <input type="text" name="" id="">
+        <button><i class="bi bi-search"></i></button>
+      </form>
+      <nav>
+        <ul>
+          <li>
+            <a href="#">
+              <i class="bi bi-person-circle"></i>
+              ログイン
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="bi bi-cart4"></i>
+              カート
+            </a>
+          </li>
+          <li class="sp-menu">
+            <a href="#">
+              <i class="bi bi-list" id="open"></i>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="container">
+    <ul class="pc-menu">
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="about.html">ABOUT</a></li>
+      <li><a href="">ACCESS</a></li>
+      <li><a href="">INFO.</a></li>
+    </ul>
+  </div>
+  </header>
+  <div class="overlay">
+    <i class="bi bi-x" id="close"></i>
+    <nav>
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="">ACCESS</a></li>
+        <li><a href="">INFO.</a></li>
+      </ul>
+    </nav>
+  </div>
+  <script src="../js/header.js"></script>
+  <script>
+    let path = location.pathname.split("/")[1];
+  
+    switch(path){
+     case 'index.html':
+         $('img').attr('href', './img/logo.png');
+         break;
+     case 'about':
+         $('img').attr('href', '../../img/logo.png');
+         break;
+     default:
+         $('img').attr('href', './img/logo.png');
+ }
+  </script>
