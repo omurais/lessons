@@ -1,4 +1,5 @@
 'use strict';
+
 {
   //ハンバーガーメニュー開閉
   const open = document.getElementById('open');
