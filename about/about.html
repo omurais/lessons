@@ -11,17 +11,6 @@
 </head>
 <body>
   <div id="header"><!-- ここにheader.htmlが読み込まれる --></div>
-  <!-- <div class="overlay">
-    <i class="bi bi-x" id="close"></i>
-    <nav>
-      <ul>
-        <li><a href="./index.html">HOME</a></li>
-        <li><a href="about.html">ABOUT</a></li>
-        <li><a href="access.html">ACCESS</a></li>
-        <li><a href="info.html">INFO.</a></li>
-      </ul>
-    </nav>
-  </div> -->
   <div id="target"></div>
   <section class="products animate about">
     <div class="container">
@@ -40,13 +29,12 @@
   
   <div id="footer"><!--ここにheader.htmlが読み込まれる--></div>
   <a href="#" id="to_top"><i class="bi bi-chevron-double-up"></i></a>
-  <script src="../js/header.js"></script>
   <script src="../js/about.js"></script>
   <script src="../js/jquery-3.6.1.min.js"></script>
   <script>
     $(function(){
-        $('#header').load('../header.html'); // #headerにheader.htmlを読み込む
-        $('#footer').load('../footer.html'); // #footerにfooter.htmlを読み込む
+        $('#header').load('../common/header.html'); // #headerにheader.htmlを読み込む
+        $('#footer').load('../common/footer.html'); // #footerにfooter.htmlを読み込む
     });
 </script>
 </body>
